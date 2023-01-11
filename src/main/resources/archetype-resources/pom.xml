@@ -12,22 +12,12 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-<!--    <groupId>${groupId}</groupId>
+    <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
-    <name>${artifactId}</name>-->
-    <groupId>ep.mil.microservices</groupId>
-    <artifactId>reactivos</artifactId>
-    <version>1.0.0</version>
-    <name>reactivos</name>
-    <description>plantilla spring boot microservice rectives</description>
+    <name>${artifactId}</name>
 
-    <!--    <developers>
-            <developer>
-                <email>${developer.email}</email>
-                <name>${developer.name}</name>
-            </developer>
-        </developers>-->
+    <description>plantilla spring boot microservice rectives</description>
 
     <properties>
         <java.version>11</java.version>
@@ -133,7 +123,7 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
-            <version>1.5.3.Final</version>
+            <version>${dependency-org.mapstruct-version}</version>
         </dependency>
 
     </dependencies>
@@ -165,7 +155,7 @@
                         <path>
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
-                            <version>1.5.3.Final</version>
+                            <version>${dependency-org.mapstruct-version}</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
