@@ -25,9 +25,10 @@
         <project.test.result.directory>${project.build.directory}/test-results</project.test.result.directory>
         <dependency-org.projectlombok-version>1.18.24</dependency-org.projectlombok-version>
         <dependency-org.mock-server-version>5.14.0</dependency-org.mock-server-version>
-        <dependency-org.mapstruct-version>1.3.1.Final</dependency-org.mapstruct-version>
+        <dependency-org.mapstruct-version>1.5.3.Final</dependency-org.mapstruct-version>
         <dependency-org.postgresql-version>42.5.1</dependency-org.postgresql-version>
         <dependency-lib-ep-cbd-microservices-utils-version>1.0.0</dependency-lib-ep-cbd-microservices-utils-version>
+        <dependency-org.apache.logging.log4j-version>2.19.0</dependency-org.apache.logging.log4j-version>
         <plugin-maven-compiler.version>3.10.1</plugin-maven-compiler.version>
         <plugin-maven-dependency.version>2.8</plugin-maven-dependency.version>
         <plugin-maven-failsafe.version>2.22.2</plugin-maven-failsafe.version>
@@ -51,6 +52,10 @@
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -124,6 +129,18 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>${dependency-org.mapstruct-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${dependency-org.apache.logging.log4j-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${dependency-org.apache.logging.log4j-version}</version>
         </dependency>
 
     </dependencies>
@@ -329,22 +346,22 @@
 
     <distributionManagement>
         <repository>
-            <id>local-releases</id>
-            <name>local-release</name>
-            <url>file:///Users//cbacilio//Documents//novopayment//ambiente//cbd//archetypes//repository//releases</url>
+            <id>bacsystem-central</id>
+            <name>bacsystem-central</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>local-snapshots</id>
-            <name>local-snapshot</name>
-            <url>file:///Users//cbacilio//Documents//novopayment//ambiente//cbd//archetypes//repository//snapshots</url>
+            <id>bacsystem-central-snapshot</id>
+            <name>bacsystem-central-snapshot</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
     <repositories>
         <repository>
-            <id>local-releases</id>
-            <name>local-release</name>
-            <url>file:///Users//cbacilio//Documents//novopayment//ambiente//cbd//archetypes//repository//releases</url>
+            <id>bacsystem-central</id>
+            <name>bacsystem-central</name>
+            <url>http://localhost:8081/repository/maven-public/</url>
         </repository>
     </repositories>
 
