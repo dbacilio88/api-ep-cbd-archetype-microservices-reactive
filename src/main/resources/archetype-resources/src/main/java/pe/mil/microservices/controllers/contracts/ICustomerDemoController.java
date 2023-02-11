@@ -22,7 +22,7 @@ public interface ICustomerDemoController {
 
     Mono<ResponseEntity<Object>> findAll();
 
-    Mono<ResponseEntity<Object>> getById(@Valid @PathVariable Long customerId);
+    Mono<ResponseEntity<Object>> getById(@Valid @PathVariable Long id);
 
     Mono<ResponseEntity<Object>> save(@Valid @RequestBody Mono<RegisterCustomerRequest> request);
 

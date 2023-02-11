@@ -11,10 +11,10 @@ server:
 # Spring configuration
 spring:
     webflux:
-        base-path: /customers/v1
+        base-path: /microservices/v1
 
     application:
-        name: customers
+        name: write-name-ms
         version: 1.0.0
         log: /logs
     messages:

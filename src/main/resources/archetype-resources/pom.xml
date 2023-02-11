@@ -305,9 +305,9 @@
                         <configuration>
                             <skip>${plugin-org.owasp.skip}</skip>
                         </configuration>
-                        <!--<goals>
+                        <goals>
                             <goal>check</goal>
-                        </goals>-->
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
@@ -351,8 +351,8 @@
             <url>http://localhost:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>bacsystem-central-snapshot</id>
-            <name>bacsystem-central-snapshot</name>
+            <id>maven-snapshots</id>
+            <name>maven-snapshots</name>
             <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
@@ -362,6 +362,11 @@
             <id>bacsystem-central</id>
             <name>bacsystem-central</name>
             <url>http://localhost:8081/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>maven-snapshots</id>
+            <name>maven-snapshots</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
         </repository>
     </repositories>
 
